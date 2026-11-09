@@ -31,13 +31,6 @@ export default function Navbar() {
           onClick={closeMenu}
           className="flex items-center gap-3 rounded-md font-semibold tracking-tight text-zinc-50 transition-colors hover:text-emerald-400 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400"
         >
-          <img
-            src={assetUrl('assets/images/me_again.jpg')}
-            alt=""
-            width={36}
-            height={36}
-            className="h-9 w-9 rounded-full border border-zinc-700 object-cover object-[50%_20%]"
-          />
           {profile.name}
         </a>
 
