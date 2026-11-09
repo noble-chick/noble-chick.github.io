@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    line-height: 1.5;
+  }
+
+  body {
+    @apply bg-zinc-950;
+    background-image:
+      radial-gradient(ellipse at top, rgba(16, 185, 129, 0.1), transparent 55%),
+      radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.4), transparent),
+      radial-gradient(1px 1px at 110px 90px, rgba(255, 255, 255, 0.3), transparent),
+      radial-gradient(1.5px 1.5px at 170px 150px, rgba(255, 255, 255, 0.35), transparent);
+    background-size: 100% 100%, 220px 220px, 220px 220px, 220px 220px;
+    background-attachment: fixed;
+  }
+
+  :focus-visible {
+    outline: 2px solid #34d399;
+    outline-offset: 2px;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .reveal {
+    animation: none;
+  }
+}
