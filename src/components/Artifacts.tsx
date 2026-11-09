@@ -32,25 +32,18 @@ export default function Artifacts() {
                 </ul>
 
                 <h3 className="mt-5 text-2xl font-semibold tracking-tight text-zinc-50">{artifact.title}</h3>
-
-                /* {artifact.image && (
-                  <img
-                    src={artifact.image.src}
-                    alt={artifact.image.alt}
-                    loading="lazy"
-                    className="mt-5 w-full rounded-xl border border-zinc-800"
-                  />
-                )} */
+                
                 {artifact.image && (
                   <div className="mt-5 aspect-video overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950">
-                  <img
-                    src={artifact.image.src}
-                    alt={artifact.image.alt}
-                    loading="lazy"
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-              )}
+                    <img
+                      src={artifact.image.src}
+                      alt={artifact.image.alt}
+                      loading="lazy"
+                      className="h-full w-full object-cover object-top"
+                      />
+                  </div>
+                )}
+                
                 {artifact.video && (
                   <div className="mt-5 aspect-video overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950">
                     <iframe
