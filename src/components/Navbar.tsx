@@ -5,6 +5,8 @@ import { profile } from '@/data/portfolio';
 import { assetUrl } from '@/utils/assetUrl';
 
 const links = [
+  { id: 'about', label: 'About' },
+  { id: 'education', label: 'Education' },
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'skills', label: 'Skills' },
