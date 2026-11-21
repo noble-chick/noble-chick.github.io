@@ -36,10 +36,10 @@ export const artifacts: Artifact[] = [
     links: [
       {
         label: 'Watch the video',
-        href: 'https://drive.google.com/file/d/1u7Ko_ZpF_fQYFIHXbJspwf3je_hRUHRn/view?usp=drive_link',
+        href: assetUrl('assets/videos/Recording of Tehreem_Why_Me_Pitch.mp4'),
       },
     ],
-    video: 'https://drive.google.com/file/d/1u7Ko_ZpF_fQYFIHXbJspwf3je_hRUHRn/preview',
+    video: assetUrl('assets/videos/Recording of Tehreem_Why_Me_Pitch.mp4'),
   },
   {
     title: 'About Me: Finding My Own Direction',
