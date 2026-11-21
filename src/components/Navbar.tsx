@@ -10,6 +10,9 @@ const links = [
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'skills', label: 'Skills' },
+  { id: 'artifacts', label: 'Artifacts' },
+  { id: 'photography', label: 'Interests' },
+  { id: 'goals', label: 'Goals' },
   { id: 'resume', label: 'Resume' },
   { id: 'contact', label: 'Contact' },
 ] as const;
