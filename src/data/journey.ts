@@ -133,4 +133,9 @@ export const goals: Goal[] = [
   },
 ];
 
-export const resumeFile: string | null = 'assets/documents/Resume(co-op).pdf';
+/*export const resumeFile: string | null = 'assets/documents/Resume(co-op).pdf';*/
+openResume() {
+  if (resumeFile) {
+    window.open(resumeFile, '_blank', 'noopener,noreferrer');
+  }
+}
