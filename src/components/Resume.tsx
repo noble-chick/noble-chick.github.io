@@ -1,4 +1,4 @@
-import { Download, FileText } from 'lucide-react';
+import { ExternalLink, FileText } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
 import { resumeFile } from '@/data/journey';
@@ -24,18 +24,19 @@ export default function Resume() {
                 <FileText size={22} aria-hidden="true" />
               </span>
               <p className="text-base text-zinc-300">
-                {resumeFile ? 'Download my resume as a PDF.' : 'My resume will be available here soon.'}
+                {resumeFile ? 'View my resume as a PDF.' : 'My resume will be available here soon.'}
               </p>
             </div>
 
             {resumeFile && (
               <a
                 href={assetUrl(resumeFile)}
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-3 text-sm font-semibold text-zinc-950 transition-all duration-200 hover:-translate-y-0.5 hover:bg-emerald-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400"
               >
-                <Download size={16} aria-hidden="true" />
-                Download resume
+                <ExternalLink size={16} aria-hidden="true" />
+                View resume
               </a>
             )}
           </div>
